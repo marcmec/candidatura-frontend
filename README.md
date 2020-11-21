@@ -15,4 +15,4 @@ Crie uma branch com o seu nome contendo o código.
 
 ### ATENÇÃO - Não suba o código na branch master
 
-[Tire suas dúvidas aqui](https://github.com/qquant-group/candidatura-frontend/issues/1)
+[Troque ideias aqui](https://github.com/qquant-group/candidatura-frontend/issues/1)
