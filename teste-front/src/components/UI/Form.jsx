@@ -1,17 +1,13 @@
 import React from 'react'
-import Tabela from '../Item/Tabela'
-import Btn from './Button'
 import InputSearch from './Input'
-import './style.css'
+import './form.css'
 
 export default function Form() {
     return (
-        <div className='form'>
-            <h2 className='qquant'>QQuant</h2>
-        <div className='inputSearch'>
-         <InputSearch/><br/>
-         </div>
-            </div>
+        <form className='form'>
+        <h1 className='titleform'>QQuant</h1>
+         <InputSearch/>
+            </form>
             
       
     )

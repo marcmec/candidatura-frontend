@@ -1,0 +1,20 @@
+.imgfundo{
+    position: -1;
+    opacity: 0.1;
+    text-align: center;
+    margin: auto;
+}
+.control{
+    position: relative;
+}
+.formsearch{
+    position: absolute;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+  }
+h1{
+    color: turquoise;
+}

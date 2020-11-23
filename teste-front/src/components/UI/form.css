@@ -1,0 +1,12 @@
+.form{
+    text-align: right;
+    margin: auto;
+    width: 300px;
+    padding: 5px;
+
+  }
+  .titleform{
+      font-size: 3em;
+      color: turquoise;
+      text-align: center;
+  }

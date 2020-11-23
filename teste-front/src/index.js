@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomeScreen from './components/Item/screens/Screen';
+import HomeScreen from './components/Item/screens/home';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
