@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'qquant';
+  width: 90%;
+  height: 100%;
+  background-image: repeating-linear-gradient(to bottom , #031973, turquoise);  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+
+@font-face{
+  font-family: 'qquant';
+  src: url('../assets/fonts/Comfortaa-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+

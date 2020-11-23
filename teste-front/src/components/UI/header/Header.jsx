@@ -1,5 +1,5 @@
-import logo from '../../assets/qquant_preto_only.png'
-
+import logo from '../../../assets/qquant_preto_only.png'
+import './header.css'
 
 
 export default function Header(){

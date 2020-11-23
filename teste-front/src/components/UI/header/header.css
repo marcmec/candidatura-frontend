@@ -1,0 +1,23 @@
+@font-face{
+    font-family: 'qquant';
+    src: url('../../../assets/fonts/Comfortaa-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+  .qquant{
+    color: turquoise;
+    font-size: 50px ;
+    text-align: center;
+  }
+  .logo{
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    display: block;
+  }
+ 
+  .header{
+    width: 90vw;
+    
+  }
+  

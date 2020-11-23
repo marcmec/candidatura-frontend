@@ -1,27 +1,23 @@
 import Form from '../../UI/Form'
-
-import Header from '../../UI/Header'
+import Header from '../../UI/header/Header'
 import Tabela from '../Tabela'
-import './screenhome.css'
+import './home.css'
 
 export default function HomeScreen(){
 
     return (
+        
       <div>
         <div className='header'>
         <Header/>
         </div>
         <section>
-        <h1>Realize uma pesquisa diferenciada.</h1>
-            <div className='form-search'>
+        <h2>Realize uma pesquisa diferenciada.</h2>
+        <div className='form-search'>
             <Form/>
             </div>
             <Tabela/>
         </section>
-
- 
-
         </div>
-
     )
 }

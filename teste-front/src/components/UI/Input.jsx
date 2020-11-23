@@ -7,8 +7,8 @@ export default function InputSearch(props){
         <input
           placeholder="id, title, author, year..."
         />
-        <IconButton color='#ffffff' type="submit" aria-label="search">
-          <SearchIcon />
+        <IconButton  color='primary'type="submit" aria-label="search">
+          <SearchIcon color='primary'/>
         </IconButton>
         </div>
 

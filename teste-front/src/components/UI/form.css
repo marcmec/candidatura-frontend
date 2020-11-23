@@ -1,12 +1,22 @@
 .form{
     text-align: right;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 300px;
-    padding: 5px;
-
   }
-  .titleform{
+.titleform{
       font-size: 3em;
       color: turquoise;
       text-align: center;
+}
+
+
+@media (min-width:320px){
+
+  .titleform{
+    font-size: 1.5em;
   }
+}
+
+
+
