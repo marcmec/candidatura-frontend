@@ -6,24 +6,21 @@
 h2{
     padding: 5px;
     font-family: 'qquant';
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     margin: auto;
-    text-align: justify;
+    text-align: left;
     
 }
 section{
  margin-left: auto;
  margin-right: auto;
 }
-
-@media (min-width:320px){
+@media (max-width:320px){
 
   h2{
-    font-size: 12px;
+    font-size: 16px;
   }
   
-
-
 
 }
