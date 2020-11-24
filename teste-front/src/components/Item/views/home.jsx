@@ -16,9 +16,8 @@ export default function HomeScreen(){
         <div className='form-search'>
             <Form/>
             </div>
-            <Item/>
-            
         </section>
+        <Item/>
         </div>
     )
 }

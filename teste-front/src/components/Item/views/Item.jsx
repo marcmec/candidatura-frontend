@@ -17,12 +17,12 @@ export default function Item(props) {
 
     return (
             <div className='scroll-table'>
-            <table >
+            <table>
                 <tbody className='myTable'>
-                <tr><td>id</td><td>title</td>
-                <td>year</td><td>doi</td><td>author</td>
-            <td>field6</td><td>View</td></tr></tbody>
-            <tbody>{row}</tbody>
+                <tr><th>id</th><th>title</th>
+                <th className='year1' >year</th><th>doi</th><th>author</th>
+            <th>field6</th><th>View</th></tr>
+            {row}</tbody>
             </table>
             </div>
             

@@ -1,26 +1,24 @@
 .scroll-table{
-    text-align: center;
-    height: 200px;
+    height: 300px;
     overflow: auto;
 
 }
 table{
-    text-align: center;
     color: white;
-    font-size: 10px;
+    padding: 5px;
     width: 90%;
-    margin-left: 5vw;
+    table-layout: fixed;
+    margin: auto  ;
 }
-td,tr{
+tbody{
+  width: 10px;
+}
+td,th{
     border: 1px solid;
     border-radius: 12px;
-}
-.scroll-table.td{
-    padding: 2px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
     width: 10px;
-    height: 5px;
-}
-.scroll-table.id, .scroll-table.year{
-    white-space: nowrap;   
-
+    word-wrap:normal;
 }
