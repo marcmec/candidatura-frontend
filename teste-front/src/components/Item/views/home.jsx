@@ -17,7 +17,6 @@ export default function HomeScreen(){
             <Form/>
             </div>
         </section>
-        <Item/>
         </div>
     )
 }
