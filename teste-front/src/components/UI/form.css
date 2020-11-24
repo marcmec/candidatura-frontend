@@ -11,23 +11,4 @@
 }
 
 
-@media (max-width:320px){
-
-  .titleform{
-    font-size: 1.5em;
-  }
-}
-@media (max-width:375px){
-
-  .titleform{
-    font-size: 1.5em;
-  }
-}
-@media (max-width:768px){
-
-  .titleform{
-    font-size: 1.8em;
-  }
-}
-
 

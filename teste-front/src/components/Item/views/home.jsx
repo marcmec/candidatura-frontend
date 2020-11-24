@@ -1,7 +1,7 @@
 import Form from '../../UI/Form'
 import Header from '../../UI/header/Header'
-import Tabela from '../Tabela'
 import './home.css'
+import Item from './Item'
 
 export default function HomeScreen(){
 
@@ -16,7 +16,8 @@ export default function HomeScreen(){
         <div className='form-search'>
             <Form/>
             </div>
-            <Tabela/>
+            <Item/>
+            
         </section>
         </div>
     )
