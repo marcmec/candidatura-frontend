@@ -1,54 +1,58 @@
 import React, { useState } from 'react'
-import data from '../../../assets/data.json'
+import dataJson from '../../../assets/data.json'
 import InputSearch from '../../UI/Input'
 import './item.css'
 
 
 export default function Item(props) {
     const [item,setItem]= useState('')
-    const [statusSort,setSort]= useState('')
-    let row = []
+    const[can,setCan]=useState(false)
+    const [statusSort,setSort]= useState({ field:'', direction:''})
+    let rowItem = []
     const handleChange = event =>{
       event.preventDefault();
       setItem(event.target.value)
     }
-    if(item.length>0){
-    row  = data.filter((data) =>{
 
-        return (data._id.match(item) || data.title.match(item) || data.year.match(item)|| data.doi.match(item)|| data.author.match(item)
-        || data.FIELD6.match(item));
+
+  if(item.length>0 && can ===false){
+    rowItem  = dataJson.filter((data) =>{
+
+        return (data._id.match(item) || data.title.match(item) || data.year.match(item)|| 
+        data.doi.match(item)|| data.author.match(item)|| data.FIELD6.match(item));
       });
     }
 
-    if(statusSort){
-      const reversed = statusSort ==='asc' ? 1 : -1;
-      row = data.sort(
+  if((statusSort.direction==='asc' ||statusSort.direction==='desc') && item.length>0 && 
+    statusSort.direction !== '' && can===true ){
+
+      rowItem = dataJson.sort(
         (a,b) => 
-          reversed * a.title.localeCompare(b.title)
-        
-      )
+          a[statusSort.field] > b[statusSort.field] ? 1 : -1
+      )    
+  }
 
+const onSort= (columm) =>{ 
+      if(can===false && item.length>0){
+      setCan(true);
+      statusSort.direction === 'desc' ? setSort({field:columm, direction:'asc'}) : 
+      setSort({field:columm, direction:'desc'})
+    }else if(can===true){
+      setCan(false);
     }
-    const ordered= ()=>{
-       statusSort === null ? setSort('asc') : setSort('desc') 
-
-     ///criar um defaul para a ordenacao
-       
-    }
-//sorting
-
-  
-    return (
+  }
+  return (
         <div>
            <InputSearch item={item} handleChange={handleChange}/>
             <div className='scroll-table'>
             <table className='principalTable'>
             <thead>
-           <tr><th >id</th><th><button onClick={ordered}>title</button></th><th>year</th>
-           <th >doi</th>
-              <th>author</th><th>field6</th></tr>
+           <tr><th>id <button onClick={() =>onSort('_id')}/></th><th>title <button onClick={() =>onSort('title')}/>
+           </th><th>year <button onClick={() =>onSort('year')}/></th>
+           <th >doi <button onClick={() =>onSort('doi')}/></th>
+              <th>author <button onClick={() =>onSort('author')}/></th><th>field6 <button onClick={() =>onSort('FIELD6')}/></th></tr>
               </thead>
-            {row.map((item, index) => {
+            {rowItem.map((item, index) => {
             return <tbody key={index}>
            
               <tr>

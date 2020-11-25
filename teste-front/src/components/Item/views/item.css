@@ -1,11 +1,12 @@
 .scroll-table{
     height: 100px;  
     overflow: auto;
+    width: 100%;
 
 }
 .principalTable{
     color: white;
-    margin-bottom: 20vmax;
+    margin-bottom: 10vh;
     padding: 10px 2px;
     width: 90%;
     table-layout: fixed;
@@ -16,13 +17,15 @@ td,th,tr{
     border-radius: 12px;
     text-align: center;
     overflow: hidden;
-    width: 100px;
+    width: 90px;
     white-space: nowrap;
-    word-wrap:normal;
 }
-.viewDetails{
 
-    width: 77px;
-}
 button{
+    margin: auto;
+    background-color: white;
+    border: 1px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 10px;
 }
