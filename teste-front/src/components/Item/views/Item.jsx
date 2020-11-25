@@ -1,30 +1,54 @@
-import React, { createElement } from 'react'
+import React, {  useEffect, useState } from 'react'
 import data from '../../../assets/data.json'
-import ButtonDetail from '../../UI/ButtonDetail'
+import InputSearch from '../../UI/Input'
 import './item.css'
 
 
 export default function Item(props) {
-    const row =[]
+    const [item,setItem]= useState('')
+    let row = []
+    const handleChange = event =>{
+      event.preventDefault();
+      setItem(event.target.value)
+    }
 
-    data.forEach(data =>{
 
-        return row.push(createElement('tr',null,<td className='id'>{data._id}</td>, 
-                <td className='title'>{data.title}</td>,<td className='year'>{data.year}</td>,
-                <td className='doi'>{data.doi}</td>, <td className='author'>{data.author}</td>,
-                <td className='field6'>{data.FIELD6}</td>,<td className='btn'><ButtonDetail/></td>));
-    });
+    if(item.length>0){
+    row  = data.filter((data) =>{
 
+        return (data._id.match(item) || data.title.match(item) || data.year.match(item)|| data.doi.match(item)|| data.author.match(item)
+        || data.FIELD6.match(item));
+      });
+    }
+  
+  
     return (
+        <div>
+           <InputSearch item={item} handleChange={handleChange}/>
+           <table className='tableHeader'>
+               <thead>
+           <tr><th>id</th><th>title</th><th>year</th><th>doi</th>
+              <th>author</th><th>field6</th></tr>
+              </thead>
+              </table>
             <div className='scroll-table'>
-            <table>
-                <tbody className='myTable'>
-                <tr><th>id</th><th>title</th>
-                <th className='year1' >year</th><th>doi</th><th>author</th>
-            <th>field6</th><th>View</th></tr>
-            {row}</tbody>
+            <table className='principalTable'>
+            {row.map((item, index) => {
+            return <tbody key={index}>
+           
+              <tr>
+                <td>{item._id}</td>
+                <td>{item.title}</td>
+                <td>{item.year}</td>
+                <td>{item.doi}</td>
+                <td>{item.author}</td>
+                <td>{item.FIELD6}</td>
+                
+               </tr>
+               
+           </tbody>})} 
             </table>
             </div>
-            
+            </div>
     )
 }

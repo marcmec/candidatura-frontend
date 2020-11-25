@@ -1,8 +1,8 @@
-.form{
-    text-align: right;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
+.divForm{
+    text-align: center;
+    margin-left: 8vw;
+    margin-right: 5vw;
+
   }
 .titleform{
       font-size: 3em;
