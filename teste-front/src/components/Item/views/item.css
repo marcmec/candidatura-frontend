@@ -10,12 +10,7 @@
     width: 90%;
     table-layout: fixed;
 }
-.tableHeader{
-    color: white;
-    width: 90%;
-    padding: 5px;
 
-}
 td,th,tr{
     border: 1px solid;
     border-radius: 12px;
@@ -28,4 +23,6 @@ td,th,tr{
 .viewDetails{
 
     width: 77px;
+}
+button{
 }
