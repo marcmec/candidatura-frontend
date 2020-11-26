@@ -45,3 +45,12 @@ button{
 .filter-label{
     width: 100px;
 }
+input,p{
+    font-family: 'qquant';
+  }
+  @font-face{
+    font-family: 'qquant';
+    src: url('../../../assets/fonts/Comfortaa-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+  }

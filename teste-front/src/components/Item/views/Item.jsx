@@ -3,7 +3,7 @@ import dataJson from '../../../assets/data.json'
 import InputSearch from '../../UI/Input'
 import './item.css'
 import BootStrapTable from 'react-bootstrap-table-next'
-import { Modal } from '@material-ui/core'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Modal, TextField } from '@material-ui/core'
 
 
 
@@ -11,10 +11,14 @@ import { Modal } from '@material-ui/core'
 export default function Item(props) {
   const [item,setItem]= useState('')
   const [showItem,setShowItem]= useState([])
+  const [showDialogForm,setDialog]=useState(false)
   const handleChange = event =>{
     event.preventDefault();
     setItem(event.target.value)
   }
+  const handleOpenDialog = ()=> setDialog(true)
+  const handleCloseDialog = ()=> setDialog(false)
+
   let myDataJson= []
   
   if(item.length>0){
@@ -40,6 +44,7 @@ export default function Item(props) {
   const showItemRow = {
     onClick: (index,rowItem) =>{
     console.log(showItem)
+    setDialog(handleOpenDialog)
     setShowItem(rowItem)
     }
   }
@@ -55,6 +60,73 @@ export default function Item(props) {
       
       />
       </div>
+      <Dialog  open={showDialogForm} onClose={handleCloseDialog} aria-labelledby="form-dialog-title">
+        <DialogContent>
+          
+          <DialogContentText>
+            Edit columms in : <br/>{showItem.title}
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="id"
+            value={showItem._id}
+            type="email"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            label="title"
+            value={showItem.title}
+            type="email"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            label="doi"
+            value={showItem.doi}
+            type="email"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            label="year"
+            value={showItem.year}
+            type="email"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            label="author"
+            value={showItem.author}
+            type="email"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            label="FIELD6"
+            value={showItem.FIELD6}
+            type="email"
+            fullWidth
+          />
+
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog} color="primary">
+            Save Edit
+          </Button>
+          <Button onClick={handleCloseDialog} color="primary">
+            Close
+          </Button>
+          
+        </DialogActions>
+      </Dialog>
     </div>
   )
 }
