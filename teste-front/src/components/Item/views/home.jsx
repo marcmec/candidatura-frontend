@@ -1,8 +1,6 @@
-import Form from '../../UI/Form'
+import Form from '../Form'
 import Header from '../../UI/header/Header'
 import './home.css'
-import Item from './Item'
-
 export default function HomeScreen(){
 
     return (

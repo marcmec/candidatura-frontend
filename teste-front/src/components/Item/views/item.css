@@ -1,7 +1,21 @@
 .scroll-table{
-    height: 100px;  
+    margin-top: 5px;
+    height: 50vh;  
     overflow: auto;
-    width: 100%;
+
+}
+table{
+    width: 95%;
+    table-layout: fixed;
+    margin: auto;
+}
+th,td{
+    border: 1px solid;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
 
 }
 .principalTable{
@@ -11,8 +25,7 @@
     width: 90%;
     table-layout: fixed;
 }
-
-td,th,tr{
+.td,.th,.tr{
     border: 1px solid;
     border-radius: 12px;
     text-align: center;
@@ -28,4 +41,7 @@ button{
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     height: 10px;
+}
+.filter-label{
+    width: 100px;
 }
