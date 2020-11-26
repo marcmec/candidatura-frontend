@@ -3,7 +3,8 @@ import dataJson from '../../../assets/data.json'
 import InputSearch from '../../UI/Input'
 import './item.css'
 import BootStrapTable from 'react-bootstrap-table-next'
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Modal, TextField } from '@material-ui/core'
+import DetailsItem from '../DetailsItem'
+import MyTextField from '../../UI/MyTextField'
 
 
 
@@ -59,74 +60,19 @@ export default function Item(props) {
       rowEvents={showItemRow}
       
       />
-      </div>
-      <Dialog  open={showDialogForm} onClose={handleCloseDialog} aria-labelledby="form-dialog-title">
-        <DialogContent>
-          
-          <DialogContentText>
-            Edit columms in : <br/>{showItem.title}
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="id"
-            value={showItem._id}
-            type="email"
-            fullWidth
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            label="title"
-            value={showItem.title}
-            type="email"
-            fullWidth
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            label="doi"
-            value={showItem.doi}
-            type="email"
-            fullWidth
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            label="year"
-            value={showItem.year}
-            type="email"
-            fullWidth
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            label="author"
-            value={showItem.author}
-            type="email"
-            fullWidth
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            label="FIELD6"
-            value={showItem.FIELD6}
-            type="email"
-            fullWidth
-          />
+      </div> 
+      <DetailsItem showDialogForm={showDialogForm} handleCloseDialog={handleCloseDialog} showItem={showItem.title}
+      
+      textfield={<MyTextField id={'id'} item={showItem._id}/>}
+      textfield1={<MyTextField id={'title'} item={showItem.title}/>}
+      textfield2={<MyTextField id={'doi'} item={showItem.doi}/>}
+      textfield3={<MyTextField id={'year'} item={showItem.yeaer}/>}
+      textfield4={<MyTextField id={'author'} item={showItem.author}/>}
+      textfield5={<MyTextField id={'field6'} item={showItem.FIELD6}/>}
 
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog} color="primary">
-            Save Edit
-          </Button>
-          <Button onClick={handleCloseDialog} color="primary">
-            Close
-          </Button>
-          
-        </DialogActions>
-      </Dialog>
+
+      />
+      
     </div>
   )
 }
