@@ -1,15 +1,16 @@
 import React from 'react'
-import MyTextField from '../UI/MyTextField'
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Modal, TextField } from '@material-ui/core'
+import SaveRoundedIcon from '@material-ui/icons/SaveRounded';
+import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
+import { Dialog, DialogActions, DialogContent, DialogContentText, IconButton} from '@material-ui/core'
 
 export default function DetailsItem(props) {
     return (
         <Dialog  open={props.showDialogForm} onClose={props.handleCloseDialog} aria-labelledby="form-dialog-title">
         <DialogContent>
           
-          <DialogContentText>
+          <p>
             Edit columms in : <br/>{props.showItem}
-          </DialogContentText>
+          </p>
           {props.textfield}
           {props.textfield1}
           {props.textfield2}
@@ -19,12 +20,13 @@ export default function DetailsItem(props) {
 
         </DialogContent>
         <DialogActions>
-          <Button onClick={props.handleCloseDialog} color="primary">
-            Save Edit
-          </Button>
-          <Button onClick={props.handleCloseDialog} color="primary">
-            Close
-          </Button>
+          <IconButton color='primary' onClick={props.handleEdit}>
+            <SaveRoundedIcon></SaveRoundedIcon>
+          </IconButton>
+          <IconButton onClick={props.handleCloseDialog} color="primary">
+            <CancelRoundedIcon></CancelRoundedIcon>
+          </IconButton>
+          
           
         </DialogActions>
       </Dialog>

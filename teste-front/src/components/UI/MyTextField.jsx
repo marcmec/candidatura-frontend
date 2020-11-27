@@ -4,13 +4,13 @@ import { TextField } from '@material-ui/core'
 
 export default function MyTextField(props) {
     return (
-        <TextField
-        autoFocus
+        <TextField 
         margin="dense"
-        id="name"
+        name={props.name}
         label={props.id}
-        value={props.item}
-        type="email"
+        value={props.value}
+        type="string"
+        onChange={props.onChange}
         fullWidth
       />
     )

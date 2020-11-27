@@ -1,4 +1,4 @@
-import Form from '../Form'
+import Form from '../../UI/Form'
 import Header from '../../UI/header/Header'
 import './home.css'
 export default function HomeScreen(){

@@ -25,32 +25,22 @@ th,td{
     width: 90%;
     table-layout: fixed;
 }
-.td,.th,.tr{
-    border: 1px solid;
-    border-radius: 12px;
-    text-align: center;
-    overflow: hidden;
-    width: 90px;
-    white-space: nowrap;
-}
 
 button{
-    margin: auto;
-    background-color: white;
+    font-family: 'qquant';
+    background-color: turquoise;
+    margin-right: 10px;
     border: 1px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    height: 10px;
+    border-radius: 20px;
+    height: 20px;
 }
 .filter-label{
     width: 100px;
 }
-input,p{
-    font-family: 'qquant';
-  }
   @font-face{
     font-family: 'qquant';
     src: url('../../../assets/fonts/Comfortaa-Bold.ttf');
     font-weight: bold;
     font-style: normal;
   }
+  
