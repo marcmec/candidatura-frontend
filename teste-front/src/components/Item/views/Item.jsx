@@ -25,8 +25,7 @@ useEffect(()=>{
 
   console.log(getJson)
   const handleUpdate = event=> {   
-    event.preventDefault();
-    setUpdate(event.target.value)
+    setJson(event.target.value)
   }
 
   const handleChange = event =>{
